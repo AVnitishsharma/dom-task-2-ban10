@@ -3,7 +3,8 @@ const aliens = [
         name: "HEATBLAST",
         species: "PYRONITE",
         planet: "PYROS",
-        description: "Magma-based lifeform. Controls fire.",
+        img1: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.AwCtntVNPIvg05CTaSB56wHaEK%3Fpid%3DApi&f=1&ipt=daa83728cdd750ced67b0389be61c8855051a9f65f10ab4a8b60f7f34065a763&ipo=images",
+        img2:"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.W2KLDFCiBql89W5nrpdkRwHaEK%3Fpid%3DApi&f=1&ipt=cfd1379bbbab72e781fa180d580dc0b7a5ad8d6527e3737c1af44a98e6fdb936&ipo=images",
         image: "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg3.wikia.nocookie.net%2F__cb20131012092051%2Fben10%2Fimages%2F2%2F20%2FHeatblast_omniverse_official.png&f=1&nofb=1&ipt=379aac48e1eaeec89e802a02a2ec6d2e4248e51c0904d9fac0e86eec7e16e12e",
     },
     {
@@ -70,11 +71,11 @@ const aliens = [
         image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvignette2.wikia.nocookie.net%2Fben10%2Fimages%2F1%2F1d%2FGrey_matter_profile.png%2Frevision%2Flatest%3Fcb%3D20120207221638&f=1&nofb=1&ipt=38f764f197e9496cbc2c14abfc237d4422a754a5939fb0d38e5ca81bb40f3ddb",
     },
     {
-        name: "GRAYMATTER",
-        species: "Galvan",
-        planet: "Galvan Prime",
+        name: "CONNONBOLT",
+        species: "Arburian Pelarota",
+        planet: "Arburia",
         description: "Living technology. Merges with machines.",
-        image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvignette2.wikia.nocookie.net%2Fben10%2Fimages%2F1%2F1d%2FGrey_matter_profile.png%2Frevision%2Flatest%3Fcb%3D20120207221638&f=1&nofb=1&ipt=38f764f197e9496cbc2c14abfc237d4422a754a5939fb0d38e5ca81bb40f3ddb",
+        image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.wikia.nocookie.net%2Fben10%2Fimages%2F1%2F15%2FCannonbolt.png%2Frevision%2Flatest%2Fscale-to-width-down%2F1200%3Fcb%3D20210314014123&f=1&nofb=1&ipt=698bb1dddcab2bc1af54d594499522bb93066881212e8246231851a9ad0ab6b9",
     }
 ];
 
@@ -88,7 +89,8 @@ const display = {
     name: document.getElementById('alienName'),
     species: document.getElementById('alienSpecies'),
     planet: document.getElementById('alienPlanet'),
-    desc: document.getElementById('alienDesc')
+    img1: document.getElementById('img1'),
+    img2: document.getElementById('img2')
 };
 
 // initialize Carousel
@@ -151,7 +153,8 @@ function updateCarousel() {
     display.name.innerText = alien.name;
     display.species.innerText = alien.species;
     display.planet.innerText = alien.planet;
-    display.desc.innerText = alien.description;
+    display.img1.src = alien.img1;
+    display.img2.src = alien.img2;
 }
 
 function rotateDial(direction) {
