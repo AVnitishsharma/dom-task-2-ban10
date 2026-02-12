@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omnitrix Interface</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- <div class="scanlines"></div> -->
+  <!-- <div class="vignette"></div> -->
+
+  <div class="main-interface">
+    <header>
+      <div class="brand">OMNITRIX <span class="version">v.10</span></div>
+      <div class="status">SYSTEM : <span class="status-active">ACTIVE</span></div>
+    </header>
+
+    <div class="hologram-stage">
+      <div class="projection-beam"></div>
+      <div class="carousel-stage">
+        <div class="carousel-container" id="carousel">
+          <!-- Images injected by JS -->
+        </div>
+      </div>
+      <!-- omitrix dial -->
+      <div class="omnitrix-dial-container">
+        <div class="dial-arrow left" id="prevBtn">❮</div>
+
+        <div class="omnitrix-core">
+          <div class="ring-outer"></div>
+          <div class="ring-inner">
+            <div class="symbol-glass">
+              <div class="hourglass"></div>
+            </div>
+          </div>
+          <div class="activation-ring"></div>
+        </div>
+
+        <div class="dial-arrow right" id="nextBtn">❯</div>
+      </div>
+
+      <div class="alien-info-card">
+        <h1 id="alienName" class="glitch" data-text="LOADING">LOADING</h1>
+        <div class="specs">
+          <div class="spec-row">
+            <span class="label">SPECIES:</span>
+            <span id="alienSpecies" class="value">-</span>
+          </div>
+          <div class="spec-row">
+            <span class="label">HOME:</span>
+            <span id="alienPlanet" class="value">-</span>
+          </div>
+        </div>
+        <p id="alienDesc" class="desc-text">Select alien DNA sample...</p>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- Sound Effects (simulated) -->
+  <audio id="sfx-turn" src=""></audio>
+  <audio id="sfx-select" src=""></audio>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
