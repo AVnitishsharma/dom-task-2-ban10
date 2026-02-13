@@ -348,16 +348,30 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') rotateDial(-1);
 });
 
-dial.addEventListener('click', () => {
+function activateDial() {
     dial.style.transform = "scale(0.9)";
-    const activeCard = document.querySelector('.alien-card.active img');
-    activeCard.style.filter = "brightness(2) drop-shadow(0 0 50px #39ff14)";
+
+    const activeCardImg = document.querySelector('.alien-card.active img');
+    const activeCard = document.querySelector('.alien-card.active');
+
+    activeCard.style.filter = "none";
+    activeCardImg.style.scale = "1.5";
 
     setTimeout(() => {
         dial.style.transform = "scale(1)";
-        activeCard.style.filter = "drop-shadow(0 0 20px var(--core-green)) sepia(100%) hue-rotate(50deg) saturate(300%) contrast(1.2)";
-        alert(`TRANSFORMATION INITIATED: ${aliens[currentIndex].name}`);
-    }, 200);
+        activeCard.style.filter =
+            "grayscale(0%) brightness(1) drop-shadow(0 0 20px var(--core-green)) sepia(100%) hue-rotate(50deg) saturate(300%) contrast(1.2)";
+        activeCardImg.style.scale = "1";
+    }, 1000);
+}
+
+dial.addEventListener("click", activateDial);
+
+document.addEventListener("keydown", (e) => {
+    if (e.code === "Space" || e.code === "ArrowUp" || e.code === "ArrowDown") {
+        e.preventDefault(); // page scroll rokne ke liye
+        activateDial();
+    }
 });
 
 // Start
