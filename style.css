@@ -182,7 +182,7 @@ header {
 
 .img-1 {
   position: absolute;
-  left: 0;
+  left: 2%;
   bottom: 10%;
   height:30%;
   width: 25%;
@@ -191,7 +191,7 @@ header {
 }
 .img-2 {
   position: absolute;
-  right: 0;
+  right: 2%;
   bottom: 10%;
   height: 30%;
   width: 25%;
@@ -289,11 +289,11 @@ header {
 
 .activation-ring {
   position: absolute;
-  width: 160px;
-  height: 160px;
-  border: 2px dashed var(--core-green);
+  width: 165px;
+  height: 165px;
+  border: 5px dashed white;
   border-radius: 50%;
-  animation: spin 10s linear infinite;
+  animation: spin 5s linear infinite;
   opacity: 0.5;
   pointer-events: none;
 }
@@ -326,6 +326,10 @@ header {
 
   .glitch {
     font-size: 1.8rem;
+  }
+
+  .img-1,.img-2{
+    display: none;
   }
 }
 
@@ -396,6 +400,7 @@ header {
   transform: translateX(150px) scale(0.8) rotateY(-30deg);
   z-index: 5;
   filter: grayscale(100%) brightness(0.6) blur(1px) drop-shadow(0 0 5px var(--core-green));
+  pointer-events: none;
 }
 
 /* Prev Class (Left) */
@@ -404,6 +409,7 @@ header {
   transform: translateX(-150px) scale(0.8) rotateY(30deg);
   z-index: 5;
   filter: grayscale(100%) brightness(0.6) blur(1px) drop-shadow(0 0 5px var(--core-green));
+  pointer-events: none;
 }
 
 /* Hidden items */
